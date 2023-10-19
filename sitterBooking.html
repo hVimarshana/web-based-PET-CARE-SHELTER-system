@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Pet Sitter Form</title>
+    <link rel="stylesheet" href="css/sitterBookingCSS.css">
+   <script>
+
+        // Function to fetch and display available sitters
+        function viewAvailableSitters() {
+            // In a real-world scenario, you would fetch the sitters from the server using an API or database query
+            // For demonstration purposes, we'll use the sample data provided in the previous example
+            const selectedPetType = "Dog"; // You can set this based on the user's selection from the form
+            const availableSitters = getAvailableSittersByPetType(selectedPetType);
+
+            // Display the available sitters in the container
+            const availableSittersContainer = document.getElementById("availableSittersContainer");
+            availableSittersContainer.innerHTML = "<h3>Available Pet Sitters for " + selectedPetType + ":</h3>";
+            availableSittersContainer.innerHTML += "<ul>";
+            availableSitters.forEach(sitter => {
+                availableSittersContainer.innerHTML += "<li>" + sitter.name + " - " + sitter.pet_type + "</li>";
+            });
+            availableSittersContainer.innerHTML += "</ul>";
+        }
+
+        // Function to filter available sitters by pet type (Same as the previous example)
+        function getAvailableSittersByPetType(petType) {
+            return availableSitters.filter(sitter => sitter.pet_type.toLowerCase() === petType.toLowerCase());
+        }
+
+        // Button click event to view available sitters
+        const viewSittersBtn = document.getElementById("viewSittersBtn");
+        viewSittersBtn.addEventListener("click", viewAvailableSitters);
+    </script>
+   
+</head>
+
+<body>
+    <div class="container">
+        <h2>Book a Pet Sitter</h2>
+        <form action="sitterBookings.php" method="post">
+            <div class="form-group">
+                <label for="petName">Pet Name:</label>
+                <input type="text" id="petName" name="petName" required>
+            </div>
+            <div class="form-group">
+                <label for="petType">Select Pet Type:</label><br>
+
+                <label for="cat">Cat</label>
+                <input type="checkbox" id="cat" name="petType" value="cat">
+                
+                <label for="dog">Dog</label>
+                <input type="checkbox" id="dog" name="petType" value="dog">
+                
+            </div>
+            <div class="form-group">
+                <label for="petOwnerName">Pet Owner Name:</label>
+                <input type="text" id="petOwnerName" name="petOwnerName" required>
+            </div>
+            <div class="form-group">
+                <label for="specialNeeds">Special Needs of Pet:</label>
+                <textarea id="specialNeeds" name="specialNeeds"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="startDate">From Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+            </div>
+            <div class="form-group">
+                <label for="endDate">To Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+            </div>
+            <div class="form-group">
+                <label for="feedingSchedule">Feeding Schedule:</label>
+                <input type="text" id="feedingSchedule" name="feedingSchedule" required>
+            </div>
+            <div class="form-group">
+                <label for="dietaryInstructions">Special Dietary Instructions:</label>
+                <textarea id="dietaryInstructions" name="dietaryInstructions"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="exerciseSchedule">Exercise Schedule:</label>
+                <input type="text" id="exerciseSchedule" name="exerciseSchedule" required>
+            </div>
+            <div class="form-group">
+                <label for="exerciseInstructions">Special Exercise Instructions:</label>
+                <textarea id="exerciseInstructions" name="exerciseInstructions"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="petPhoto">Upload Image of Your Pet:</label>
+                <input type="file" id="petPhoto" name="petPhoto" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <label for="additionalInfo">Any other information you would like to provide:</label>
+                <textarea id="additionalInfo" name="additionalInfo"></textarea>
+            </div>
+            <div>
+                <label for="available sitter">View Available Sitters</label>
+                <button type="button" id="viewSittersBtn">select</button>
+
+            <!-- Placeholder to display available sitters -->
+            <div id="availableSittersContainer"></div>
+            </div><br>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>

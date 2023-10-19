@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+body {
+       font-family: tahoma;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    input[type="date"],
+    input[type="button"]
+    input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    textarea {
+        resize: vertical;
+    }
+    
+    input[type="submit"] {
+        background-color: #446cf0;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #68cae2;
+    }
+    #availableSittersContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+  
+      /* Sitter box styles */
+      .sitter-box {
+        border: 2px solid #3498db;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+  
+      .sitter-box h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: #3498db;
+      }
+  
+      .sitter-box p {
+        margin: 0;
+        line-height: 1.5;
+      }
+  
+      .sitter-box input[type="button"] {
+        background-color: #3498db;
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin-top: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+  
+      .sitter-box input[type="button"]:hover {
+        background-color: #2980b9;
+      }
+  
+      .sitter-box:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px);
+      }

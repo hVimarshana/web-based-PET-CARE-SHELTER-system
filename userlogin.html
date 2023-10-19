@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,500|Poppins:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card">
+          <h2 class="card-title text-center">User Login</h2>
+          <div class="card-body py-md-4">
+            <form method="post" action="userlogin.php">
+              <div class="form-group">
+                <input type="text" class="form-control" name="username" id="username" placeholder="Enter the Username">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" id="password" placeholder="Enter the Password">
+              </div>
+              <div class="d-flex flex-row align-items-center justify-content-between">
+                <button class="btn btn-primary" type="submit">SignUp</button>
+              </div>			  
+              <div>
+			  <a href="sitterBooking.php">Go to the website</a>
+			  </div>
+			  
+			  <!-- Validation message placeholder -->			  
+              <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
